@@ -8,12 +8,15 @@ import Register from './pages/Register';
 import Login from './pages/Login';
 import ContactUs from './pages/ContactUs';
 import CreateCountdown from './pages/CreateCountdown';
-
+import useToken  from './components/useToken';
+import Logout from './pages/Logout';
 function App() {
+  const {token,setToken} = useToken()
+console.log(token)
   return (
     <Router>
     <div className="App">
-      <Navbar/>
+      <Navbar token={token}/>
       <div className="content">
     <Switch>
         <Route exact path="/">
@@ -23,8 +26,11 @@ function App() {
            <Register/>
           </Route>
           <Route exact path="/login">
-           <Login/>
+           <Login setToken={setToken}/>
           </Route>
+          <Route exact path="/logout">
+            <Logout />
+            </Route>   
           <Route exact path="/contactUs">
            <ContactUs/>
           </Route>

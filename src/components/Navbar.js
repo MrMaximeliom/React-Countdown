@@ -1,6 +1,9 @@
 
 import { NavLink } from 'react-router-dom';
-const Navbar = () => {
+
+const Navbar = ({token}) => {
+  // const {token,setToken} = useState(token)
+
 
     return ( 
       <header>
@@ -11,8 +14,9 @@ const Navbar = () => {
             <div>Simple</div>
             <div>Countdown</div>
            </h1>
-           <NavLink exact to="/login"  >Sign In</NavLink>
-           <NavLink exact to="/register"  >Join Us</NavLink>
+           {token ? <NavLink exact to="/logout"  >Logout</NavLink> :   <NavLink exact to="/login"  >Login</NavLink> }
+           {token ? "" :   <NavLink exact to="/register"  >Sign Up</NavLink> }
+        
         </nav>
       </header>
 

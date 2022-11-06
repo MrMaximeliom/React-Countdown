@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); */
 :root{
     --lite-links-color:#603B3B;
     --lite-body-background:#FFF1EE;
@@ -195,15 +195,23 @@ footer a{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  padding-bottom: 20px;
 }
 .flex-outer > li > label:not(:last-child),
 .flex-outer > li > span{
   flex: 1 0 120px;
   max-width: 220px;
 }
-.flex-outer >li:not(:last-child){
+.flex-outer >li:nth-child(7){
+  margin-bottom: unset;
+}
+.flex-outer > .error-data{
   margin-bottom: 20px;
 }
+
+
+
+
 .flex-outer li label,
 .flex-outer li span{
   padding: 8px;
@@ -213,7 +221,7 @@ footer a{
   color: var(--lite-text-color);
   text-align: start;
 }
-.flex-outer li input,
+.flex-outer li input:not(input[type="submit"]),
 .flex-outer li textarea
 
 {
@@ -221,7 +229,7 @@ footer a{
   border: none;
   border-radius: 9px;
 }
-.flex-outer li input:not(input[type="radio"]),
+.flex-outer li input:not(input[type="radio"],input[type="submit"]),
 .flex-outer li textarea
 
 {
@@ -261,6 +269,27 @@ footer a{
 }
 
 /* ends here */
+
+/* styles for create-countdown page*/
+#create-countdown-container{
+  width:fit-content;
+}
+.time-container{
+  display: flex;
+  margin-bottom: 2rem;
+}
+.time-container li{
+ padding-right: 20px; 
+}
+.time-container li input{
+  width: 80px;
+ }
+.time-error{
+  width: 140px;
+}
+/* ends here */
+
+
 .btn{
   text-decoration: none;
   color: var(--lite-links-color);
@@ -327,6 +356,10 @@ footer > div:nth-child(3){
   justify-self: center;
   grid-column: 3;
 }
+
+.time-container li:last-child{
+  padding-right: unset; 
+ }
 
 }
 @media screen and (max-width:620px){
