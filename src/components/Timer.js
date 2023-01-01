@@ -1,60 +1,34 @@
 import { useEffect,useState } from "react";
 import moment from "moment/moment";
+import React from 'react'
+import { updateEvent } from "../features/events/eventAction";
+import {useDispatch } from 'react-redux';
+
 // const pokemon = require("../assets/mp3/music_pand.mp3");
 
-const Timer = ({event_date,notes}) => {
+const Timer = ({event_date,event,styles}) => {
 
     const [daysState,setDaysState] = useState("120")
     const [hoursState,setHoursState] = useState("4")
     const [minutesState,setMinutesState] = useState("12")
     const [secondsState,setSecondsState] = useState("22")
+    const dispatch = useDispatch()
     // use Audio constructor to create HTMLAudioElement
  
 
-//   btn.onclick = e => {
-//     // mark our audio element as approved by the user
-//     audio.play().then(() => { // pause directly
-//       audio.pause();
-//       audio.currentTime = 0;
-//     });
-//     countdown();
-//     btn.disabled = true;
-//   };
- 
 
- 
- 
- 
-  // pause audio sound
-  const pauseSound = () => {
-    // audioTune.pause();
-    const music = document.getElementsByClassName("audio-element")[0];
-    music.pause();
-    console.log("pause");
-  }
- 
-  // stop audio sound
-  const stopSound = () => {
-    const music = document.getElementsByClassName("audio-element")[0];
-    music.pause();
-    music.currentTime = 0;
-    console.log("stop");
-  }
-    function playAudio(){
-      const music = document.getElementsByClassName("audio-element")[0];
-      music.play();
-      console.log("playing music")
-        // playSound();
-
-    }
-    
-    let futureDate = moment().add(10,"days");
+    var date = new Date(event_date.year,
+      event_date.month,
+      event_date.day,
+      event_date.hour,
+      event_date.minute,
+      event_date.second)
+       
    
-    function countdown(){
-        
+   
+    function countdown(){  
         let startDate = moment(moment(), "DD.MM.YYYY, hh:mm:ss");
-        var endDate = moment(futureDate);
-        
+        var endDate = moment(date);
         var seconds =  Math.floor(endDate.diff(startDate, 'seconds')%60);
         var days =  endDate.diff(startDate, 'days');
         var hours =  endDate.diff(startDate, 'hours');
@@ -72,38 +46,58 @@ const Timer = ({event_date,notes}) => {
             setHoursState(hours)
             setMinutesState(minutes)
             setSecondsState(seconds)
-          
-            
-          
         }
-        else{
-            console.log("ya moayed it is null ya5")
+       
         }
-    }
 
    
     useEffect(() => {
+     
+      let startDate = moment(moment(), "DD.MM.YYYY, hh:mm:ss");
+      var endDate = moment(date);
+      if(endDate > startDate){
         setInterval(() => {
             countdown();
         }, 1000);
-         // eslint-disable-next-line
-         }, []);
-  
-  
-          
-    
- 
 
-    return (
-      <div className="countdownParent">
-       <h3>Ramadan Countdown</h3>
+        
+      }
+      else{
+        setDaysState("00")
+        setHoursState("00")
+        setMinutesState("00")
+        setSecondsState("00")
+        if(event !== undefined && event.is_active === true)
+        {
+          
+          const new_event = {
+            is_active:false,
+            id:event.id,
+            name:event.name,
+            event_date:event.event_date,
+            event_hour:event.event_hour,
+            event_minute:event.event_minute,
+            event_second:event.event_second,
+            UserId:event.UserId
+           
+        }
+        dispatch(updateEvent({event:new_event}))
+        }
        
 
-      <table className="countdownContainer">
-      
+      }
+         // eslint-disable-next-line
+         }, []);
+         
+         
+       
+    return (
+      <div className={(styles === undefined)? "countdownParent": styles.countdownParentCard}>
+       <h3>{event?.name || "DD"}</h3>
+       <h2>Timer until:&nbsp;{moment(date).format('llll')}</h2>
+      <table className={(styles === undefined)? "countdownContainer": styles.countdownContainerCard}>
         <tbody>
-          
-          <tr className="info">
+          <tr className={(styles === undefined)? "info": styles.infoCard}>
               <th id="days">{daysState}</th>
               <th>:</th>
               <th id="hours">{hoursState}</th>
@@ -112,7 +106,7 @@ const Timer = ({event_date,notes}) => {
               <th>:</th>
               <th id="seconds">{secondsState}</th>
           </tr>
-          <tr className="info">
+          <tr className={(styles === undefined)? "info": styles.infoCard}>
               <td>Days</td>
               <td></td>
               <td>Hours</td>
@@ -123,30 +117,7 @@ const Timer = ({event_date,notes}) => {
           </tr>
           </tbody>
       </table>
-      <div>
-        <button onClick={playAudio}>
-          <span>Play Audio</span>
-        </button>
-        <button onClick={()=>{
-          pauseSound()
-        }}>
-          <span>Pause Audio</span>
-        </button>
-        <button onClick={()=>{
-          stopSound()
-        }}>
-          <span>Stop Audio</span>
-        </button>
-      
-        <audio className="audio-element">
-          <source src="../assets/mp3/music.mp3" ></source>
-        </audio>
-      
-      </div>
   </div>
-
-
-  
       );
 }
 

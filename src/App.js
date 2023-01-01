@@ -8,25 +8,34 @@ import Register from './pages/Register';
 import Login from './pages/Login';
 import ContactUs from './pages/ContactUs';
 import CreateCountdown from './pages/CreateCountdown';
-import useToken  from './components/useToken';
 import Logout from './pages/Logout';
+import Countdowns from "./pages/Countdowns";
+import React from 'react'
+import 'react-notifications/lib/notifications.css';
+import {NotificationContainer} from 'react-notifications';
+import UserCountdowns from './pages/UserCountdowns';
+import { useSelector } from 'react-redux'
+
+
 function App() {
-  const {token,setToken} = useToken()
-console.log(token)
+  const {userInfo } = useSelector((state) => state.user) 
+
+
   return (
     <Router>
+    
     <div className="App">
-      <Navbar token={token}/>
+      <Navbar />
       <div className="content">
     <Switch>
         <Route exact path="/">
           <Home />
           </Route>
           <Route exact path="/register">
-           <Register/>
+           <Register  />
           </Route>
           <Route exact path="/login">
-           <Login setToken={setToken}/>
+           <Login />
           </Route>
           <Route exact path="/logout">
             <Logout />
@@ -37,6 +46,10 @@ console.log(token)
           <Route exact path="/createCountdown">
            <CreateCountdown/>
           </Route>
+          <Route exact path="/myCountdowns">
+            <UserCountdowns/>
+          </Route>
+         
           <Route path="*">
            <NotFound/>
           </Route>
@@ -44,6 +57,9 @@ console.log(token)
 
     </Switch>
     </div>
+    <div data-attr="fff">
+      <NotificationContainer/>
+      </div>
     <Footer/>
     </div>
     </Router>

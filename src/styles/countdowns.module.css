@@ -1,0 +1,58 @@
+.card{
+    max-width: 50%;
+    padding: 3%;
+    border: .3px solid var(--lite-footer-border-bottom-color);
+    border-radius: 3%;
+    margin: 2%;
+    background: var(--lite-nav-background-color);
+}
+.countdownRows{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.countdownTitle{
+   padding-bottom: 3%;
+   letter-spacing: 2px;
+   font-size: 1.2rem;
+}
+.countdownDate{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 3%;
+
+}
+.countdownButton{
+    width: fit-content;
+    padding-bottom: 5%;
+    padding-top: 10%;
+    border: 1px;
+}
+.countdownButton a{
+    text-decoration: none;
+   
+}
+/* new styles */
+.infoCard{
+    font-size: 2rem;
+  }
+.countdownContainerCard{
+  text-align: center;
+  background: var(--lite-countdown-background-color);
+
+  border:1px solid var(--lite-countdown-container-border-color);
+  border-radius: 9px;
+  box-shadow: 0 0 5px 3px var(--lite-countdown-container-box-shadow-color);
+}
+.countdownParentCard{
+    display: grid;
+    overflow-x: scroll;
+}
+.countdownParentCard h3{
+  
+    font-size: 2em;
+    padding: 30px;
+    text-align: start;
+  
+}
