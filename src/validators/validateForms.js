@@ -1,4 +1,3 @@
-import api from "../api/events"
 import axios from '../api/users'
 const ValidateTextField = (value) => {
     let stringOnlyRegex = /^[a-zA-Z\s]*$/g

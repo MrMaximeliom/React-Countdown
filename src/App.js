@@ -9,16 +9,13 @@ import Login from './pages/Login';
 import ContactUs from './pages/ContactUs';
 import CreateCountdown from './pages/CreateCountdown';
 import Logout from './pages/Logout';
-import Countdowns from "./pages/Countdowns";
 import React from 'react'
 import 'react-notifications/lib/notifications.css';
 import {NotificationContainer} from 'react-notifications';
 import UserCountdowns from './pages/UserCountdowns';
-import { useSelector } from 'react-redux'
 
 
 function App() {
-  const {userInfo } = useSelector((state) => state.user) 
 
 
   return (

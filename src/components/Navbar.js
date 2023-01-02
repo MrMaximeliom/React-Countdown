@@ -1,7 +1,6 @@
 
 import { NavLink } from 'react-router-dom';
-import React, { useContext,useEffect } from 'react'
-import AuthContext from '../context/AuthProvider';
+import React from 'react'
 import { useSelector,useDispatch } from 'react-redux';
 import { getUserEvents } from "../features/events/eventAction";
 

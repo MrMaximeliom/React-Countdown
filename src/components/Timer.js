@@ -93,7 +93,7 @@ const Timer = ({event_date,event,styles}) => {
        
     return (
       <div className={(styles === undefined)? "countdownParent": styles.countdownParentCard}>
-       <h3>{event?.name || "DD"}</h3>
+       <h3>{event?.name }</h3>
        <h2>Timer until:&nbsp;{moment(date).format('llll')}</h2>
       <table className={(styles === undefined)? "countdownContainer": styles.countdownContainerCard}>
         <tbody>

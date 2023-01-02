@@ -1,17 +1,14 @@
-import React , { useContext,useState,useEffect } from 'react'
+import React , { useState,useEffect } from 'react'
 import { Link } from "react-router-dom";
-import api from "../api/auth"
 import validator from "../validators/validateForms"
 import Notifications from "../components/Notifications"
-
 import {useHistory} from 'react-router-dom';
-import AuthContext from "../context/AuthProvider";
 import { useSelector,useDispatch } from 'react-redux';
 import { registerUser } from '../features/users/userAction';
 
 
 const Register = () => {
-    const { loading,userInfo,error } = useSelector((state) => state.user)
+    const { userInfo,error } = useSelector((state) => state.user)
     const dispatch = useDispatch()
     // states of form fields
     const [firstName,setFirstName] = useState('')
@@ -28,12 +25,11 @@ const Register = () => {
     const[lastNameError,setLastNameError] = useState('')
     const[emailError,setEmailError] = useState('')
     const[usernameError,setUsernameError] = useState('')
-    const[genderError,setGenderError] = useState('')
+    const[genderError] = useState('')
     const[passwordError,setPasswordError] = useState('')
     const[confirmPasswordError,setConfirmPasswordError] = useState('')
     const[isRulesAcceptedError,setIsRulesAcceptedError] = useState('')
     const[isDataValid,setIsDataValid] = useState(true)
-    const { setAuth } = useContext(AuthContext) 
     const history = useHistory();
 
     useEffect(()=>{
@@ -56,13 +52,7 @@ const Register = () => {
         e.preventDefault()
         if(isDataValid){
             // new user data
-            const newUser = {
-                firstName:firstName,
-                lastName:lastName,
-                email:email,
-                password:password,
-                username:username
-            }
+            
             try{
                 dispatch(registerUser({firstName,lastName,email,password,username}))
                   // create new user with this data

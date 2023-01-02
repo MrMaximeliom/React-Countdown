@@ -16,6 +16,8 @@ const Notifications = (type,title,message,duration=3000,callBack) => {
         case 'error':
           NotificationManager.error(message,title, duration,callBack);
           break;
+        default:
+          break;
       }
 
       return ( 

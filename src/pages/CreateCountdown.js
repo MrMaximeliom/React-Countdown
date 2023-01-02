@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useState } from "react";
 import React from 'react'
 
@@ -9,7 +8,7 @@ const CreateCountdown = () => {
     const [eventMinute,setEventMinute] = useState('');
     const [eventSecond,setEventSecond] = useState('');
     const [eventNameError,setEventNameError] = useState('')
-    const [eventDateError,setEventDateError] = useState('')
+    const [eventDateError] = useState('')
     const [eventHourError,setEventHourError] = useState('')
     const [eventMinuteError,setEventMinuteError] = useState('')
     const [eventSecondError,setEventSecondError] = useState('')
