@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/React-Countdown/static/css/main.f939b690.css",
+    "main.js": "/React-Countdown/static/js/main.00f4eff7.js",
+    "static/js/787.482db2ac.chunk.js": "/React-Countdown/static/js/787.482db2ac.chunk.js",
+    "static/media/notification.svg?s3g3t9": "/React-Countdown/static/media/notification.5d0158671dd860c714c4.svg",
+    "static/media/notification.eot": "/React-Countdown/static/media/notification.3657084dc0419605a91c.eot",
+    "static/media/notification.woff?s3g3t9": "/React-Countdown/static/media/notification.c392cd33d9d9de730f9d.woff",
+    "static/media/notification.ttf?s3g3t9": "/React-Countdown/static/media/notification.c5d9251ea82e42f75381.ttf",
+    "index.html": "/React-Countdown/index.html",
+    "main.f939b690.css.map": "/React-Countdown/static/css/main.f939b690.css.map",
+    "main.00f4eff7.js.map": "/React-Countdown/static/js/main.00f4eff7.js.map",
+    "787.482db2ac.chunk.js.map": "/React-Countdown/static/js/787.482db2ac.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f939b690.css",
+    "static/js/main.00f4eff7.js"
+  ]
+}
