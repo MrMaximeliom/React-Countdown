@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/React-Router/static/css/main.63cee12a.css",
-    "main.js": "/React-Router/static/js/main.d818d371.js",
-    "static/js/787.482db2ac.chunk.js": "/React-Router/static/js/787.482db2ac.chunk.js",
-    "static/media/notification.svg?s3g3t9": "/React-Router/static/media/notification.5d0158671dd860c714c4.svg",
-    "static/media/notification.eot": "/React-Router/static/media/notification.3657084dc0419605a91c.eot",
-    "static/media/notification.woff?s3g3t9": "/React-Router/static/media/notification.c392cd33d9d9de730f9d.woff",
-    "static/media/notification.ttf?s3g3t9": "/React-Router/static/media/notification.c5d9251ea82e42f75381.ttf",
-    "index.html": "/React-Router/index.html",
-    "main.63cee12a.css.map": "/React-Router/static/css/main.63cee12a.css.map",
-    "main.d818d371.js.map": "/React-Router/static/js/main.d818d371.js.map",
-    "787.482db2ac.chunk.js.map": "/React-Router/static/js/787.482db2ac.chunk.js.map"
+    "main.css": "https://mrmaximeliom.github.io/React-Countdown/static/css/main.4e02dc45.css",
+    "main.js": "https://mrmaximeliom.github.io/React-Countdown/static/js/main.a0d082d2.js",
+    "static/js/787.482db2ac.chunk.js": "https://mrmaximeliom.github.io/React-Countdown/static/js/787.482db2ac.chunk.js",
+    "static/media/notification.svg?s3g3t9": "https://mrmaximeliom.github.io/React-Countdown/static/media/notification.5d0158671dd860c714c4.svg",
+    "static/media/notification.eot": "https://mrmaximeliom.github.io/React-Countdown/static/media/notification.3657084dc0419605a91c.eot",
+    "static/media/notification.woff?s3g3t9": "https://mrmaximeliom.github.io/React-Countdown/static/media/notification.c392cd33d9d9de730f9d.woff",
+    "static/media/notification.ttf?s3g3t9": "https://mrmaximeliom.github.io/React-Countdown/static/media/notification.c5d9251ea82e42f75381.ttf",
+    "index.html": "https://mrmaximeliom.github.io/React-Countdown/index.html",
+    "main.4e02dc45.css.map": "https://mrmaximeliom.github.io/React-Countdown/static/css/main.4e02dc45.css.map",
+    "main.a0d082d2.js.map": "https://mrmaximeliom.github.io/React-Countdown/static/js/main.a0d082d2.js.map",
+    "787.482db2ac.chunk.js.map": "https://mrmaximeliom.github.io/React-Countdown/static/js/787.482db2ac.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.63cee12a.css",
-    "static/js/main.d818d371.js"
+    "static/css/main.4e02dc45.css",
+    "static/js/main.a0d082d2.js"
   ]
 }
