@@ -1,10 +1,20 @@
+.cardsContainerSection{
+    display: grid;
+    flex-direction: row;
+    justify-content: center;
+    grid-template-columns: repeat(3,1fr);
+    max-width: 1200px;
+    gap: 60px;
+    margin: 0 auto;
+}
 .card{
-    max-width: 50%;
     padding: 3%;
     border: .3px solid var(--lite-footer-border-bottom-color);
     border-radius: 3%;
     margin: 2%;
     background: var(--lite-nav-background-color);
+    height: 100%;
+    margin-top: 1rem;
 }
 .countdownRows{
     display: flex;
@@ -15,7 +25,14 @@
 .countdownTitle{
    padding-bottom: 3%;
    letter-spacing: 2px;
-   font-size: 1.2rem;
+   /*font-size: 1.2rem;*/
+  
+}
+.countdownTitle span{
+    font-size: 2em;
+    padding: 30px;
+    text-align: start;
+    color:var(--lite-headers-color);
 }
 .countdownDate{
     display: flex;
@@ -23,6 +40,11 @@
     padding-bottom: 3%;
 
 }
+.countdownDate span{
+    font-size: 1.5em;
+    color:var(--lite-headers-color);
+}
+
 .countdownButton{
     width: fit-content;
     padding-bottom: 5%;
@@ -56,3 +78,43 @@
     text-align: start;
   
 }
+.countdownParentCard h2{
+  
+   white-space: nowrap;
+  
+}
+
+/* Responsive Styles */
+@media screen and (max-width:930px){
+.cardsContainerSection{
+    grid-template-columns: repeat(2,minmax(300px,600px));
+    gap:20px;
+}
+}
+@media screen and (max-width:620px){
+    .cardsContainerSection{
+        grid-template-columns: repeat(1,minmax(200px,600px));
+        gap:30px;
+    }
+}
+/* x-small devices (portrait phones, less than 576px) */
+@media screen and (max-width:520px)  {
+.countdownTitle span{
+    font-size:1.2em;
+    font-weight:800;
+}  
+.countdownDate span{
+    font-size: 1.2em;
+    font-weight: 600;
+} 
+.countdownParentCard h2{
+    font-size: 1.4em;
+    white-space: unset;
+}
+.infoCard{
+    font-size:1.3em;
+}
+  
+}
+  
+  /* ends here */

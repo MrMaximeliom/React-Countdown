@@ -1,6 +1,7 @@
 import React from "react";
 import UserCountdown from "../components/UserCountdown";
 import { useSelector } from "react-redux";
+import styles from '../styles/countdowns.module.css'
 const UserCountdowns = () => {
     const { eventInfo } = useSelector((state) => state.event)
     let content
@@ -17,8 +18,8 @@ const UserCountdowns = () => {
         </div>
     }
     return ( 
-      <section>
-         <h2>My Countdowns</h2>
+      <section className={styles.cardsContainerSection}>
+         {/* <h2>My Countdowns</h2> */}
         {content}
       </section>
  

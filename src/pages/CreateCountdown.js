@@ -1,6 +1,8 @@
-import { Link } from "react-router-dom";
 import { useState } from "react";
 import React from 'react'
+import { createEvent } from "../features/events/eventAction";
+import { useDispatch } from 'react-redux'
+import Notifications from "../components/Notifications"
 
 const CreateCountdown = () => {
     const [eventName,setEventName] = useState('');
@@ -15,15 +17,32 @@ const CreateCountdown = () => {
     const [eventSecondError,setEventSecondError] = useState('')
     const [note,setNote] = useState('');
     const [noteError,setNoteError] = useState('');
-
+    const dispatch = useDispatch()
     let stringOnlyRegex = /^[a-zA-Z\s]*$/g
     let hoursRegex = /^([0-9]|0[0-9]|1[0-9]|2[0-4])$/g
     let minutesAndSecondsRegex = /^([0-9]|0[0-9]|1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9])$/g
-
-   
-    
     const handleSubmit = (e) =>{
         e.preventDefault();
+        console.log("pushed")
+        const event = {
+            name: eventName,
+            event_date:eventDate,
+            event_hour:eventHour,
+            event_minute:eventMinute,
+            event_second:eventSecond,
+            is_active:true,
+            UserId:localStorage.getItem('userId')
+
+        }
+        try{
+            Notifications("success","Success",`Event ${eventName} created successfully!`)
+
+        }
+        catch(e){
+            Notifications("error",`Failed to create ${eventName} event ... please try again later!`,"Failed to create event!")
+
+        }
+        dispatch(createEvent({event}))
     }
     
     return ( 

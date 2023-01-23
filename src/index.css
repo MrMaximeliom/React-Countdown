@@ -108,7 +108,7 @@ nav a:nth-child(5){
 /* ends here */
 table{
   color: var(--lite-text-color);
-  margin-bottom: 5rem;
+ 
 }
 .center-text{
   width: 40%;
@@ -123,6 +123,7 @@ table{
   font-size: 1.3em;
   text-align: start;
   padding-bottom: 2.5rem;
+  margin-top: 3rem;
 }
 .home-container h2{
   font-size: 2.5em;
@@ -153,6 +154,7 @@ footer{
   padding-top: 2rem;
   padding-bottom: 2rem;
   background: var(--lite-footer-background-color);
+  margin-top: 60px;
 }
 footer li{
   list-style-type: none;

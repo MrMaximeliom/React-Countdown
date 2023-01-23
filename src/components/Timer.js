@@ -6,7 +6,7 @@ import {useDispatch } from 'react-redux';
 
 // const pokemon = require("../assets/mp3/music_pand.mp3");
 
-const Timer = ({event_date,event,styles}) => {
+const Timer = ({event_date,event,styles,title=true}) => {
 
     const [daysState,setDaysState] = useState("120")
     const [hoursState,setHoursState] = useState("4")
@@ -93,7 +93,7 @@ const Timer = ({event_date,event,styles}) => {
        
     return (
       <div className={(styles === undefined)? "countdownParent": styles.countdownParentCard}>
-       <h3>{event?.name || "DD"}</h3>
+       <h3>{title ? event?.name : ""}</h3>
        <h2>Timer until:&nbsp;{moment(date).format('llll')}</h2>
       <table className={(styles === undefined)? "countdownContainer": styles.countdownContainerCard}>
         <tbody>

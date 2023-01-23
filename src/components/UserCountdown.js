@@ -28,7 +28,7 @@ const UserCountdown = ({countdown}) => {
             <div className={styles.countdownDate}>
                 <span>{countdown.is_active? "Active": "Not Active"}</span>
             </div>
-            <Timer event_date={event_date} notes={""}  event={countdown} styles={styles}/> 
+            <Timer event_date={event_date} notes={""}  event={countdown} styles={styles} title={false}/> 
             
            <div className={styles.countdownButton}>
             <Link to="#" className="btn btn-primary">View</Link>

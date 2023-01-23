@@ -15,8 +15,6 @@ const Login = () => {
     const [email,setEmail] = useState("");
     const [password,setPassword] = useState("");
      // define auth context
-
-
      // if user already logged in redirect him/her to home page
      useEffect(()=>{
        

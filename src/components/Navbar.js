@@ -14,7 +14,6 @@ const Navbar = () => {
     //  const { eventInfo } = useSelector((state) => state.event)
 
    }
-
   
     return ( 
       <header>
@@ -30,7 +29,7 @@ const Navbar = () => {
             <span>Countdowns</span>
            <ul className='dropdown-content'>
            <li><NavLink exact to="/myCountdowns" onClick={handleGetCountdowns}>My Countdowns</NavLink></li>
-            <li><NavLink exact to="/">Create new Countdown</NavLink></li>
+            <li><NavLink exact to="/createCountdown">Create new Countdown</NavLink></li>
            </ul>
          </div>
           //  <NavLink exact to="/createCountdown"  >New Countdown</NavLink> 
