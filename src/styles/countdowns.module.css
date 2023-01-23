@@ -3,7 +3,7 @@
     flex-direction: row;
     justify-content: center;
     grid-template-columns: repeat(3,1fr);
-    max-width: 1200px;
+    max-width: 1600px;
     gap: 60px;
     margin: 0 auto;
 }
@@ -29,7 +29,7 @@
   
 }
 .countdownTitle span{
-    font-size: 2em;
+    font-size: 1.7em;
     padding: 30px;
     text-align: start;
     color:var(--lite-headers-color);
@@ -41,7 +41,7 @@
 
 }
 .countdownDate span{
-    font-size: 1.5em;
+    font-size: 1.4em;
     color:var(--lite-headers-color);
 }
 
@@ -57,7 +57,7 @@
 }
 /* new styles */
 .infoCard{
-    font-size: 2rem;
+    font-size: 1.4em;
   }
 .countdownContainerCard{
   text-align: center;
@@ -80,21 +80,61 @@
 }
 .countdownParentCard h2{
   
-   white-space: nowrap;
+    /*white-space: nowrap;*/
+    white-space: unset;
   
 }
 
 /* Responsive Styles */
-@media screen and (max-width:930px){
+@media screen and (max-width:1600px){
+    .cardsContainerSection{
+        grid-template-columns: repeat(2,1fr);
+        gap:20px;
+        max-width: 1200px;
+    }
+    .countdownTitle span{
+        font-size:1.5em;
+        font-weight:800;
+    }  
+    .countdownDate span{
+        font-size: 1.4em;
+        font-weight: 600;
+    } 
+    .countdownParentCard h2{
+        font-size: 1.5em;
+        white-space: unset;
+    }
+    .infoCard{
+        font-size:1.4em;
+    }
+}
+@media screen and (max-width:960px){
+    .countdownTitle span{
+        font-size:1.2em;
+        font-weight:800;
+    }  
+    .countdownDate span{
+        font-size: 1.2em;
+        font-weight: 600;
+    } 
+    .countdownParentCard h2{
+        font-size: 1.4em;
+        white-space: unset;
+    }
+    .infoCard{
+        font-size:1.3em;
+    }
 .cardsContainerSection{
-    grid-template-columns: repeat(2,minmax(300px,600px));
+    grid-template-columns: repeat(1,minmax(300px,600px));
     gap:20px;
+    max-width: 1200px;
 }
 }
 @media screen and (max-width:620px){
     .cardsContainerSection{
         grid-template-columns: repeat(1,minmax(200px,600px));
         gap:30px;
+        max-width: 1200px;
     }
 }
 /* x-small devices (portrait phones, less than 576px) */
