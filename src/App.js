@@ -9,7 +9,7 @@ import Login from './pages/Login';
 import ContactUs from './pages/ContactUs';
 import CreateCountdown from './pages/CreateCountdown';
 import Logout from './pages/Logout';
-import Countdowns from "./pages/Countdowns";
+import UserProfile from './pages/UserProfile';
 import React from 'react'
 import 'react-notifications/lib/notifications.css';
 import {NotificationContainer} from 'react-notifications';
@@ -48,6 +48,9 @@ function App() {
           </Route>
           <Route exact path="/myCountdowns">
             <UserCountdowns/>
+          </Route >
+          <Route exact path="/profile">
+            <UserProfile />
           </Route>
          
           <Route path="*">
