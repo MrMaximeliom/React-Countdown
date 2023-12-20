@@ -1,5 +1,6 @@
 {
   "name": "countdown",
+  "homepage": "https://mrmaximeliom.github.io/React-Countdown/",
   "version": "0.1.0",
   "private": true,
   "react/jsx-uses-react": "off",

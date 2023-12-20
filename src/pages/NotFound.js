@@ -5,7 +5,7 @@ const NotFound = () => {
     return (  
         <div>
         <h3>Sorry Not Found</h3>
-           <Link to="/">Home</Link>
+           <Link to="/React-Countdown/">Home</Link>
         </div>
 
     );

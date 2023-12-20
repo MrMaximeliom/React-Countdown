@@ -28,7 +28,7 @@ function App() {
       <Navbar />
       <div className="content">
     <Switch>
-        <Route exact path="/">
+        <Route exact path="/React-Countdown">
           <Home />
           </Route>
           <Route exact path="/register">
