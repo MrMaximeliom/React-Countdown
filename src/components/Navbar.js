@@ -17,7 +17,7 @@ const Navbar = () => {
     return ( 
       <header>
         <nav>
-           <NavLink exact to="/">Home</NavLink>
+           <NavLink exact to="/React-Countdown">Home</NavLink>
            <NavLink exact to="/ContactUs" >Contact Us</NavLink>
            <h1>
             <div>Simple</div>
