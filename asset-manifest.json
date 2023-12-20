@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.383162e6.css",
-    "main.js": "/static/js/main.b297e4f8.js",
-    "static/js/787.d9337784.chunk.js": "/static/js/787.d9337784.chunk.js",
-    "static/media/pic.jpg": "/static/media/pic.79ea85ee83141e7a41c2.jpg",
-    "static/media/notification.svg?s3g3t9": "/static/media/notification.5d0158671dd860c714c4.svg",
-    "static/media/notification.eot": "/static/media/notification.3657084dc0419605a91c.eot",
-    "static/media/notification.woff?s3g3t9": "/static/media/notification.c392cd33d9d9de730f9d.woff",
-    "static/media/notification.ttf?s3g3t9": "/static/media/notification.c5d9251ea82e42f75381.ttf",
-    "index.html": "/index.html",
-    "main.383162e6.css.map": "/static/css/main.383162e6.css.map",
-    "main.b297e4f8.js.map": "/static/js/main.b297e4f8.js.map",
-    "787.d9337784.chunk.js.map": "/static/js/787.d9337784.chunk.js.map"
+    "main.css": "/React-Countdown/static/css/main.0640ca11.css",
+    "main.js": "/React-Countdown/static/js/main.3121d586.js",
+    "static/js/787.d9337784.chunk.js": "/React-Countdown/static/js/787.d9337784.chunk.js",
+    "static/media/pic.jpg": "/React-Countdown/static/media/pic.79ea85ee83141e7a41c2.jpg",
+    "static/media/notification.svg?s3g3t9": "/React-Countdown/static/media/notification.5d0158671dd860c714c4.svg",
+    "static/media/notification.eot": "/React-Countdown/static/media/notification.3657084dc0419605a91c.eot",
+    "static/media/notification.woff?s3g3t9": "/React-Countdown/static/media/notification.c392cd33d9d9de730f9d.woff",
+    "static/media/notification.ttf?s3g3t9": "/React-Countdown/static/media/notification.c5d9251ea82e42f75381.ttf",
+    "index.html": "/React-Countdown/index.html",
+    "main.0640ca11.css.map": "/React-Countdown/static/css/main.0640ca11.css.map",
+    "main.3121d586.js.map": "/React-Countdown/static/js/main.3121d586.js.map",
+    "787.d9337784.chunk.js.map": "/React-Countdown/static/js/787.d9337784.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.383162e6.css",
-    "static/js/main.b297e4f8.js"
+    "static/css/main.0640ca11.css",
+    "static/js/main.3121d586.js"
   ]
 }
